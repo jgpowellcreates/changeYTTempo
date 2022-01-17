@@ -1,22 +1,41 @@
 // Removing the function to see how Extension behaves w/ automatically run behavior
 console.log("changeYTTemplate script runs EACH TIME I open the window");
 let receivedStartTempo;
+let userTempo;
 let startTempoInput = document.querySelector('input#startTempoInput');
 chrome.storage.local.get("origTempo", function(origTempo){
   receivedStartTempo = origTempo.origTempo;
   startTempoInput.value = origTempo.origTempo;
 });
 
+let userTempoInput = document.querySelector('input#endTempoInput');
+userTempoInput.addEventListener('change', updateUserInput);
 
+function updateUserInput(e) {
+  e.preventDefault();
+  userTempo = userTempoInput.value;
+}
 
 let submitBtn = document.querySelector("button#submitChange");
+submitBtn.addEventListener('click', btnClick);
 
-submitBtn.addEventListener('click', sayTempo);
+let custPlaybackRate = document.querySelector('#playbackInfo > span');
+let playbackInfo = document.querySelector("#playbackInfo");
 
-function sayTempo(e) {
-    e.preventDefault();
-    console.log("Clicked button",)
-    console.log("Found Start Tempo?", startTempoInput)
+function btnClick(e) {
+  e.preventDefault();
+  let newTempo = (userTempo/startTempoInput.value).toString().substring(0,6);
+  custPlaybackRate.innerHTML = newTempo;
+  updatePlaybackInfo();
+}
+
+function updatePlaybackInfo() {
+  custPlaybackRate = document.querySelector('#playbackInfo > span');
+  if (custPlaybackRate.innerText != 1) {
+    playbackInfo.style.display = "block";
+  } else {
+    playbackInfo.style.display = "none";
+  }
 }
 
 //Chrome Set Up Information Below
