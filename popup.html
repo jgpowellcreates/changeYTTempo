@@ -4,33 +4,35 @@
    <link rel="stylesheet" href="tempoStyle.css">
 </head>
 <body>
-    <h2>Change Tempo</h2>
-    <form action="">
-        <table>
-            <tr>
-                <td>
-                    <p>Starting tempo:</p>
-                </td>
-                <td>
-                    <input type="text" name="startTempo" id="startTempo" placeholder="-">
-                </td>
-            </tr>
-            <!-- Have this notification pop up as a tool-tip! -->
-            <span>BPM auto-recognized from 'source'</span>
-            <tr>
-                <td>
-                    <p>Desired tempo:</p>
-                </td>
-                <td>
-                    <input type="text" name="startTempo" id="startTempo" placeholder="-">
-                </td>
-            </tr>
-        </table>
-        <button type="submit" id="submitChange">Change Tempo!</button>
-    </form>
-    <h5>Tempo Playback is <span>1x</span> of original speed</h5>
-    <!-- <button id="changeColor">Click Me</button> -->
-    <!-- <script src="popup.js"></script> -->
+    <div class="wrapper">
+        <h2>Change Tempo</h2>
+        <form action="">
+            <table id="tempoInputs">
+                <tr>
+                    <td>
+                        <p>Starting tempo:</p>
+                    </td>
+                    <td>
+                        <input type="text" name="startTempoInput" id="startTempoInput" placeholder="-">
+                    </td>
+                </tr>
+                <!-- Have this notification pop up as a tool-tip! -->
+                <span>BPM auto-recognized from 'source'</span>
+                <tr>
+                    <td>
+                        <p>Desired tempo:</p>
+                    </td>
+                    <td>
+                        <input type="text" name="endTempoInput" id="endTempoInput" placeholder="-">
+                    </td>
+                </tr>
+            </table>
+            <center><button type="submit" id="submitChange">Change Tempo!</button></center>
+        </form>
+        <h5 id="playbackInfo">Tempo Playback is <span>1x</span> of original speed</h5>
+        <!-- <button id="changeColor">Click Me</button> -->
+        <!-- <script src="popup.js"></script> -->
+    </div>
     <script src="changeYTTempo.js"></script>
 </body>
 </html>
