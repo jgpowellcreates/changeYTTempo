@@ -22,11 +22,21 @@ submitBtn.addEventListener('click', btnClick);
 let custPlaybackRate = document.querySelector('#playbackInfo > span');
 let playbackInfo = document.querySelector("#playbackInfo");
 
-function btnClick(e) {
+function btnClick(e,tab) {
   e.preventDefault();
+  console.log(e,tab)
   let newTempo = (userTempo/startTempoInput.value).toString().substring(0,6);
   custPlaybackRate.innerHTML = newTempo;
   updatePlaybackInfo();
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    if(tabs.length == 0){ 
+        console.log("could not send mesage to current tab");
+    }else{
+        chrome.tabs.sendMessage(tabs[0].id, {"playbackAlt": custPlaybackRate.innerHTML}, function(response) {
+            console.log("received message from content script: "+response.farewell);
+        });
+    }
+});
 }
 
 function updatePlaybackInfo() {

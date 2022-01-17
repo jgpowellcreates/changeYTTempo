@@ -1,3 +1,9 @@
+//This is the basic script off of which the Chrome Extension is built.
+//This script works as expected when pasted in the console and the function is recalled...
+//But that's not a super convenient way to make these changes!
+
+//Keeping this file untouched so that it can always be used as a reference for the basic Extension operation
+
 function changeTempoTo(input) {
     let endingTempo = input;
     let startingTempo = 0;
