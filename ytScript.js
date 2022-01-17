@@ -1,5 +1,5 @@
 //Confirming the extension content script fires!
-console.log("Chrome Extension is running!")
+console.log("ytScript (default content script) is running")
 
 //Pulling a small chunk of changeYTTempo.js file to see how script runs on YT page
 let startingTempo = 0;

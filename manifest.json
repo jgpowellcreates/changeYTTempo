@@ -18,6 +18,7 @@
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
+    "default_title": "Opens 'Change Tempo' interface for bpm options",
     "default_icon": {
       "16": "./images/get_started16.png",
       "32": "./images/get_started32.png",
