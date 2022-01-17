@@ -1,13 +1,12 @@
 // Removing the function to see how Extension behaves w/ automatically run behavior
-console.log("changeYTTemplate script is running");
+console.log("changeYTTemplate script runs EACH TIME I open the window");
 
-let test = document.querySelector("input#startTempo");
 let submitBtn = document.querySelector("button#submitChange");
 submitBtn.addEventListener('click', sayTempo);
 
 function sayTempo(e) {
     e.preventDefault();
-    console.log("Clicked button",test)
+    console.log("Clicked button",)
 }
 
 // function changeTempoTo(input) {
