@@ -1,8 +1,15 @@
 // Removing the function to see how Extension behaves w/ automatically run behavior
 console.log("changeYTTemplate script runs EACH TIME I open the window");
+let receivedStartTempo;
+let startTempoInput = document.querySelector('input#startTempoInput');
+chrome.storage.local.get("origTempo", function(origTempo){
+  receivedStartTempo = origTempo.origTempo;
+  startTempoInput.value = origTempo.origTempo;
+});
+
+
 
 let submitBtn = document.querySelector("button#submitChange");
-let startTempoInput = document.querySelector('input#startTempoInput');
 
 submitBtn.addEventListener('click', sayTempo);
 

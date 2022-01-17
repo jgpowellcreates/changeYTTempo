@@ -48,6 +48,7 @@ Therefore, the actualy JavaScript code written in changeYTTempo.js is useless si
     - [x] Title
     - [x] 2 Input Fields (one should be ready to auto-populate)
     - [x] Submit Button
-- [ ] Pass Info to PopUp - upon Page load, Content Script should run and send 'BPM' or 'false' to popup
+- [x] Pass Info to PopUp - upon Page load, Content Script should run and send 'BPM' or 'false' to popup
+    - [ ] Check for URL so that 'ytScript' will run on new pages. (Needs to consider SPA setup?)
 - [ ] Accept User Inputs
 - [ ] Pass User Inputs to Window

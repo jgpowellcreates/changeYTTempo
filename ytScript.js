@@ -2,9 +2,19 @@
 console.log("ytScript (default content script) is running")
 //Pulling a small chunk of changeYTTempo.js file to see how script runs on YT page
 //Let's see what we're grabbing first
-window.onload = (event) => {event.preventDefault(); setTimeout(() => {grabInfo()},1000)}
+window.onload = (event) => {event.preventDefault(); setTimeout(() => {grabInfo()},500)}
+let webAddress = window.location.href;
+window.location.href.addEventListener('change', checkAddress)
+
+function checkAddress(){
+    console.log("Checking Address functions")
+    if (window.location.href != webAddress) {
+        grabInfo();
+    }
+}
 
 function grabInfo() {
+    console.log('grabbing info!')
     let startingTempo = 0;
     let grabTitle = document.querySelector('.title > yt-formatted-string').innerText;
     let grabDesc = document.querySelector('#description > yt-formatted-string.content')//.children;
