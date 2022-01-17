@@ -44,10 +44,10 @@ Therefore, the actualy JavaScript code written in changeYTTempo.js is useless si
 - Looking into the Chrome API will help understand where to grab what and how to pass between files
 - First MVP will only function for YouTube videos where BPM is specified in Title or Description
 **Steps**
-[ ] Complete Popup UI
-    [ ] Title
-    [ ] 2 Input Fields (one should be ready to auto-populate)
-    [ ] Submit Button
-[ ] Pass Info to PopUp - upon Page load, Content Script should run and send 'BPM' or 'false' to popup
-[ ] Accept User Inputs
-[ ] Pass User Inputs to Window
+- [ ] Complete Popup UI
+    - [ ] Title
+    - [ ] 2 Input Fields (one should be ready to auto-populate)
+    - [ ] Submit Button
+- [ ] Pass Info to PopUp - upon Page load, Content Script should run and send 'BPM' or 'false' to popup
+- [ ] Accept User Inputs
+- [ ] Pass User Inputs to Window
