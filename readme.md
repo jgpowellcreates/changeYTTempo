@@ -52,3 +52,5 @@ Therefore, the actualy JavaScript code written in changeYTTempo.js is useless si
     - [x] Check for URL so that 'ytScript' will run on new pages. (Needs to consider SPA setup?)
 - [x] Accept User Inputs
 - [x] Pass User Inputs to Window
+- [ ] Try accessing Spotify's API for BPM Check as a first step - https://developer.spotify.com/documentation/web-api/reference/#/
+- [ ] Try accessing SongBPM for BPM Check - https://songbpm.com/searches/1c5626f0-0cb6-49c3-a61a-cd487d08032a
